@@ -7,8 +7,8 @@ dirname = os.path.dirname(__file__)
 t = Tree() # Creates an empty tree
 
 A_name = " Can we model an individual’s unique perception of sounds?\nWhat features are most perceptually relevant?\nHow much do individuals differ?\nAre there patterns? "
-B_name = " How can data engineering and ML training techniques\ncapture the musical values of an artist? "
-C_name = " How can machine learning be applied to an artist’s own\npersonal data to yield creative projects they deem meaningful? "
+B_name = " How can data engineering and ML training techniques\ncapture the musical values of an artist?\n (Data engineering tool, annotation ML research) "
+C_name = " How can machine learning be applied to an artist’s own\npersonal data to yield creative projects in their voice?\n (Personal data ML research) "
 
 A = t.add_child(name=A_name)
 B = t.add_child(name=B_name)
@@ -30,7 +30,7 @@ H = F.add_child(name=H_name)
 ts = TreeStyle()
 ts.mode = "c" # draw tree in circular mode
 ts.arc_start = -45
-ts.arc_span = 180
+ts.arc_span = 210
 
 # General
 ts.scale = 100
@@ -82,7 +82,7 @@ t.add_face(TextFace(" Can I train a neural network?  \n Yes (Ragdale) ", fgcolor
 
 # # Save file out
 out_path = os.path.join(dirname, 'images')
-t.render(os.path.join(out_path, "question_tree.png"), w=12, units="in", tree_style=ts, dpi=300)
+t.render(os.path.join(out_path, "question_tree.png"), w=24, units="in", tree_style=ts, dpi=300)
 
 # # print in terminal
 # print(t.get_ascii(show_internal=True))
